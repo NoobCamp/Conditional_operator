@@ -4,93 +4,102 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("Задание №1");
-        int age = 17;
-        if (age >= 18) {
-            System.out.println("Если возраст человека равен " + age + ", то он совершеннолетний");
+        byte clientOS = 1;
+        if (clientOS == 0) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
         } else {
-            System.out.println("Если возраст человека равен " + age + ", то он не достиг совершеннолетия, нужно немного подождать");
+            System.out.println("Установите версию приложения для Android по ссылке");
         }
-        {
+        // если используются мелкие числа, то можно ли использовать byte, а не int, как было в уроках? В прошлом домашке тоже byte использовал
         System.out.println("Задание №2");
-        byte temp = 4;
-            if (temp < 5) {
-                System.out.println("На улице " + temp + " градуса, нужно надеть шапку");
+        byte clientOS1 = 0;
+        int clientDeviceYear = 2014;
+        if (clientDeviceYear < 2015) {
+            if (clientOS1 == 0) {
+                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
             } else {
-                System.out.println("На улице " + temp + " градусов, можно идти без шапки");
+                System.out.println("Установите облегченную версию приложения для Android по ссылке");
             }
-            {
-                System.out.println("Задание №3");
-                int speed = 70;
-                if(speed > 60) {
-                    System.out.println("Если скорость " + speed + ", то придется заплатить штраф");
-                } else {
-                    System.out.println("Если скорость " + speed + ", то можно ездить спокойно");
-                }
-                {
-                    System.out.println("Задание №4");
-                    byte age1 = 19;
-                    boolean howOld = age1 < 18;
-                    if(howOld) {
-                        if (age1 >= 2 && age1 < 7) {
-                            System.out.println("Если возраст человека равен " + age1 + ", то ему нужно ходить в детский сад");
-                        } else {
-                            System.out.println("Если возраст человека равен " + age1 + ", то ему нужно ходить в школу");
-                        }
-                    } else {
-                        if (age1 < 24) {
-                            System.out.println("Если возраст человека равен " + age1 + ", то ему нужно ходить в университет");
-                        } else {
-                            System.out.println("Если возраст человека равен " + age1 + ", то ему нужно ходить на работу");
-                            // очень сложно получилось с двойным if-else, не уверен на счёт правильности, но только так придумал
-                            // и ещё возраст 1 год не учитывается, по такой системе в 1 год должен ходить в школу и как его учесть не придумал
-                        }
-                        {
-                            System.out.println("Задание №5");
-                            byte age2 = 13;
-                            if (age2 < 5) {
-                                System.out.println("Если возраст ребенка равен " + age2 + ", то ему нельзя кататься на аттракционе");
-                            } else {
-                                if (age2 < 14) {
-                                    System.out.println("Если возраст ребенка равен " + age2 + ", то ему можно кататься в сопровождении взрослого");
-                                } else {
-                                    System.out.println("Если возраст ребенка равен " + age2 + ", то ему можно кататься без сопровождения взрослого");
-                                }
-                            }
-                            {
-                                System.out.println("Задание №6");
-                                byte yourNumber = 103;
-                                if (yourNumber <= 60) {
-                                    System.out.println("Вам доступно сидячее место");
-                                } else {
-                                    if (yourNumber <= 102) {
-                                        System.out.println("Сидячих мест не осталось, доступно только ехать стоя");
-                                    } else {
-                                        System.out.println("К сожалению в вагоне больше не осталось мест");
-                                    }
-                                }
-                            }
-                            {
-                                System.out.println("Задание №7");
-                                int one = 15;
-                                int two = 21;
-                                int three = 20;
-                                boolean compare1 = one > two && one > three;
-                                boolean compare2 = two > three;
-                                if (compare1) {
-                                    System.out.println("Число " + one + " больше других");
-                                } else {
-                                    if (compare2) {
-                                        System.out.println("Число " + two + " больше других");
-                                    } else {
-                                        System.out.println("Число " + three + " больше других");
-                                        // пока кажется всё муторно немного и использовал разные методы решения в задачах, но оптимальным кажется именно в последнем задании, он короче остальных
-                                }
-                            }
-                            }
-                        }
-                    }
-                }
-            }
+        } else if (clientOS1 == 0) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else {
+            System.out.println("Установите версию приложения для Android по ссылке");
         }
+        System.out.println("Задание №3");
+        int year = 1585;
+        boolean isIt1584 = year > 1584; // по условия не совсем понял, а в 1584 уже вёлся отсчёт и это високосный год или нет?
+        if (isIt1584) {
+            if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+                System.out.println(year + " год является високосным");
+            } else {
+                System.out.println(year + " год не является високосным");
+            }
+        } else {
+            System.out.println("В " + year + " ещё не вёлся отсчёт високосного года");
+        }
+
+        System.out.println("Задание №4");
+        int deliveryDistance = 101;
+        boolean lessThan100km = deliveryDistance <= 100;
+        int deliveryDays = 1;
+        if (lessThan100km) {
+            if (deliveryDistance < 20) {
+                System.out.println("Потребуется дней: " + deliveryDays);
+            } else if (deliveryDistance >= 20 && deliveryDistance < 60) {
+                deliveryDays = deliveryDays + 1;
+                System.out.println("Потребуется дней: " + deliveryDays);
+            } else {
+                deliveryDays = deliveryDays + 2;
+                System.out.println("Потребуется дней: " + deliveryDays);
+            }
+        } else {
+            System.out.println("Доставка невозможна"); // в задании указано так, будто срок доставки должен быть указан переменной
+            // но ведь можно обойтись без переменной срока доставки и сразу писать число в зависимости от расстояния
+            // в задании написано: "сообщение в консоль: "Потребуется дней: " + срок доставки."
+        }
+        System.out.println("Задание №5");
+        byte monthNumber = 1;
+        switch (monthNumber) {
+            case 1:
+                System.out.println("Зима");
+                break;
+            case 2:
+                System.out.println("Зима");
+                break;
+            case 3:
+                System.out.println("Весна");
+                break;
+            case 4:
+                System.out.println("Весна");
+                break;
+            case 5:
+                System.out.println("Весна");
+                break;
+            case 6:
+                System.out.println("Лето");
+                break;
+            case 7:
+                System.out.println("Лето");
+                break;
+            case 8:
+                System.out.println("Лето");
+                break;
+            case 9:
+                System.out.println("Осень");
+                break;
+            case 10:
+                System.out.println("Осень");
+                break;
+            case 11:
+                System.out.println("Осень");
+                break;
+            case 12:
+                System.out.println("Зима");
+                break;
+            default:
+        }
+        // на счёт 5 задания не уверен, как бы всё максимально просто, но объёмно и кажется смысл был использовать else-if для группировки месяцев во времена года
+        // но с другой стороны это выдавать внутри условного оператора переменным число, которое будет в case читать и всё равно выйдет фигня
+        // подскажите тогда, правильно ли решил или может надо было иначе, а не максимально простой метод с кучей строк
     }
 }
