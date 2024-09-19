@@ -10,7 +10,7 @@ public class Main {
         } else {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
-        // если используются мелкие числа, то можно ли использовать byte, а не int, как было в уроках? В прошлом домашке тоже byte использовал
+
         System.out.println("Задание №2");
         byte clientOS1 = 0;
         int clientDeviceYear = 2014;
@@ -25,10 +25,10 @@ public class Main {
         } else {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
+
         System.out.println("Задание №3");
-        int year = 1585;
-        boolean isIt1584 = year > 1584; // по условия не совсем понял, а в 1584 уже вёлся отсчёт и это високосный год или нет?
-        if (isIt1584) {
+        int year = 2021;
+        if (year > 1584) {
             if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
                 System.out.println(year + " год является високосным");
             } else {
@@ -39,23 +39,18 @@ public class Main {
         }
 
         System.out.println("Задание №4");
-        int deliveryDistance = 101;
-        boolean lessThan100km = deliveryDistance <= 100;
+        int deliveryDistance = 91;
         int deliveryDays = 1;
-        if (lessThan100km) {
+        if (deliveryDistance <= 100) {
             if (deliveryDistance < 20) {
                 System.out.println("Потребуется дней: " + deliveryDays);
             } else if (deliveryDistance >= 20 && deliveryDistance < 60) {
-                deliveryDays = deliveryDays + 1;
-                System.out.println("Потребуется дней: " + deliveryDays);
+                System.out.println("Потребуется дней: " + (deliveryDays + 1));
             } else {
-                deliveryDays = deliveryDays + 2;
-                System.out.println("Потребуется дней: " + deliveryDays);
+                System.out.println("Потребуется дней: " + (deliveryDays + 2));
             }
         } else {
-            System.out.println("Доставка невозможна"); // в задании указано так, будто срок доставки должен быть указан переменной
-            // но ведь можно обойтись без переменной срока доставки и сразу писать число в зависимости от расстояния
-            // в задании написано: "сообщение в консоль: "Потребуется дней: " + срок доставки."
+            System.out.println("Доставка невозможна");
         }
         System.out.println("Задание №5");
         byte monthNumber = 1;
@@ -98,8 +93,5 @@ public class Main {
                 break;
             default:
         }
-        // на счёт 5 задания не уверен, как бы всё максимально просто, но объёмно и кажется смысл был использовать else-if для группировки месяцев во времена года
-        // но с другой стороны это выдавать внутри условного оператора переменным число, которое будет в case читать и всё равно выйдет фигня
-        // подскажите тогда, правильно ли решил или может надо было иначе, а не максимально простой метод с кучей строк
     }
 }
