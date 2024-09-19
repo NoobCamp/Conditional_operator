@@ -12,8 +12,8 @@ public class Main {
         }
 
         System.out.println("Задание №2");
-        byte clientOS1 = 0;
-        int clientDeviceYear = 2014;
+        byte clientOS1 = 1;
+        int clientDeviceYear = 2015;
         if (clientDeviceYear < 2015) {
             if (clientOS1 == 0) {
                 System.out.println("Установите облегченную версию приложения для iOS по ссылке");
